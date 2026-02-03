@@ -99,7 +99,7 @@ Ouvrez [http://localhost:3000](http://localhost:3000) pour voir le résultat.
 
 Le projet est optimisé pour être déployé sur **Vercel**.
 
-**Lien de la démo :** [Insérez votre lien Vercel ici]
+**Lien de la démo :** (https://pulsai-crm-p8h1.vercel.app/)
 
 ---
 
