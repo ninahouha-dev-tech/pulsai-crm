@@ -26,7 +26,7 @@ export default function Sidebar() {
   return (
     <aside className="hidden md:flex flex-col w-64 bg-surface border-r border-border h-screen sticky top-0">
       {/* Logo Area */}
-      <div className="p-6 flex items-center gap-3">
+      <div className="p-6 flex items-center gap-3 mb-4">
         <div className="bg-pulsai-blue/20 p-2 rounded-lg text-pulsai-blue">
             <Bot size={24} />
         </div>

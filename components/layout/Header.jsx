@@ -1,12 +1,23 @@
-import { Search, Bell, User } from "lucide-react";
+import { Search, Bell, Menu } from "lucide-react";
 
-export default function Header({ title }) {
+export default function Header({ title, onOpenMobileNav }) {
   return (
     <header className="h-16 border-b border-border bg-background/80 backdrop-blur-md sticky top-0 z-10 px-6 flex items-center justify-between">
-      {/* Titre de la page courante (Mobile/Desktop) */}
-      <h2 className="font-display text-lg font-semibold text-white">
-        {title}
-      </h2>
+      
+      <div className="flex items-center gap-4">
+        {/* Mobile Menu Trigger */}
+        <button 
+          onClick={onOpenMobileNav}
+          className="md:hidden p-2 -ml-2 text-gray-400 hover:text-white hover:bg-surface-hover rounded-lg transition-colors"
+        >
+          <Menu size={20} />
+        </button>
+
+        {/* Titre de la page courante (Mobile/Desktop) */}
+        <h2 className="font-display text-lg font-semibold text-white">
+          {title}
+        </h2>
+      </div>
 
       {/* Actions Droite */}
       <div className="flex items-center gap-4">

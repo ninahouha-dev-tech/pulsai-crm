@@ -1,16 +1,27 @@
 # 🚀 PulsAI CRM
 
 Dashboard SaaS moderne développé avec **Next.js**, **Tailwind CSS v4** et **Framer Motion**.
-Conçu pour être performant, accessible et scalable.
+Conçu pour être performant, accessible et scalable pour une gestion client intelligente.
 
 ## 🛠 Stack Technique
 
 - **Framework** : Next.js 15 (Pages Router)
-- **Styling** : Tailwind CSS v4
-- **Animations** : Framer Motion
-- **Icônes** : Lucide React
-- **Polices** : Next/Font (Ubuntu & Unbounded)
-- **UX** : NProgress, Glassmorphism design
+- **Styling** : Tailwind CSS v4 (Compilé avec @tailwindcss/postcss)
+- **Animations** : Framer Motion (Optimisation des performances avec animate-once)
+- **Icônes** : Lucide React (Utilisation systématique)
+- **Charte Graphique** :
+  - **Bleu Principal** : #3590E3
+  - **Vert Secondaire** : #BAF09D
+  - **Gris Neutre** : #1F2937
+- **Polices** : Next/Font (Unbounded pour les titres, Ubuntu pour le corps de texte)
+
+## 🤖 Capacités IA Précises
+
+Le projet démontre l'intégration de fonctionnalités d'IA avancées :
+
+- **IA Conversationnelle** : Agents autonomes pour les ventes et le support 24/7.
+- **Scoring Prédictif** : Identification algorithmique des prospects à fort potentiel.
+- **Support Génératif** : Compréhension du langage naturel pour la résolution automatique de tickets.
 
 ## 📂 Structure du Projet
 
@@ -18,11 +29,12 @@ Conçu pour être performant, accessible et scalable.
 pulsai-crm/
 ├── components/
 │   ├── ui/           # Composants atomiques (Button, Card, Badge...)
-│   └── layout/       # Sidebar, Header
-├── layouts/          # Wrappers globaux (DashboardLayout)
-├── pages/            # Routes (Dashboard, Tickets, Campaigns...)
-├── data/             # Mock Data (Simulation Backend)
-├── utils/            # Helpers (cn, formatters)
+│   └── layout/       # Navigation persistante (Sidebar, Header, MobileNav)
+├── layouts/          # Wrappers globaux (DashboardLayout, MainLayout)
+├── pages/            # Routes (Saisies en .jsx pour conformité stricte)
+├── hooks/            # Hooks personnalisés (useLocalStorage, etc.)
+├── data/             # Mock Data (Simulation API Backend)
+├── utils/            # Helpers & Utilitaires (cn, formatting)
 └── styles/           # CSS Global & Thème Tailwind v4
 ```
 
@@ -51,29 +63,44 @@ Ouvrez [http://localhost:3000](http://localhost:3000) pour voir le résultat.
 
 ## 📄 Pages Implémentées
 
-- **Dashboard** (`/dashboard`) : Vue d'ensemble avec KPIs et graphiques.
-- **Conversations** (`/conversations`) : Chat interface type Crisp/Intercom.
-- **Tickets** (`/tickets`) : Gestionnaire de tickets style Kanban/Liste.
-- **Campagnes** (`/campaigns`) : Outil d'automatisation marketing.
-- **Paramètres** (`/settings`) : Configuration du compte.
-- **Login** (`/`) : Page d'accueil / Connexion.
+- **Accueil / Landing Page** (`/`) : Hero section premium avec accès direct au Design System.
+- **Login** (`/login`) : Interface de connexion sécurisée avec identifiants démo.
+- **Dashboard** (`/dashboard`) : Vue analytique complète avec KPIs dynamiques.
+- **Conversations** (`/conversations`) : Interface de messagerie temps réel.
+- **Tickets** (`/tickets`) : Gestionnaire de support client structuré.
+- **Campagnes** (`/campaigns`) : Outil d'automatisation des envois et suivis.
+- **Paramètres** (`/settings`) : Gestion du profil et des préférences.
+
+## ✨ Points Forts du Design
+
+- **Next-Gen UI** : Utilisation intensive du Glassmorphism et des gradients animés.
+- **Micro-interactions** : Animations fluides via Framer Motion pour chaque action utilisateur.
+- **Design System First** : Architecture basée sur une bibliothèque de composants réutilisables.
 
 ## 📸 Captures d'écran
 
-| Page de Connexion / Accueil   | Dashboard (Vue d'ensemble)        |
-| ----------------------------- | --------------------------------- |
-| ![Login](public/images/1.png) | ![Dashboard](public/images/4.png) |
+| Landing Page (Accueil)                         | Page de Connexion                        |
+| ---------------------------------------------- | ---------------------------------------- |
+| ![Hero](public/images/page%20d'accueil%20.png) | ![Login](public/images/login%20page.png) |
 
-| Conversations / Chat                  | Tickets & Support               |
-| ------------------------------------- | ------------------------------- |
-| ![Conversations](public/images/6.png) | ![Tickets](public/images/7.png) |
+| Dashboard Analytics                              | Conversations / Chat                                            |
+| ------------------------------------------------ | --------------------------------------------------------------- |
+| ![Dashboard](public/images/page%20dashboard.png) | ![Conversations](public/images/page%20de%20conversation%20.png) |
 
-| Campagnes Marketing               | Paramètres                       |
-| --------------------------------- | -------------------------------- |
-| ![Campagnes](public/images/8.png) | ![Settings](public/images/9.png) |
+| Tickets & Support                                   | Campagnes Marketing                                  |
+| --------------------------------------------------- | ---------------------------------------------------- |
+| ![Tickets](public/images/page%20de%20ticket%20.png) | ![Campagnes](public/images/page%20de%20campagne.png) |
 
-### Autres vues et détails (Mobile / Tablette)
+| Paramètres                                               |
+| -------------------------------------------------------- |
+| ![Settings](public/images/page%20de%20paramètres%20.png) |
 
-|             Détail 1             |             Détail 2             |             Détail 3             |
-| :------------------------------: | :------------------------------: | :------------------------------: |
-| ![Mobile 1](public/images/7.png) | ![Mobile 2](public/images/8.png) | ![Mobile 3](public/images/9.png) |
+## 🚀 Déploiement
+
+Le projet est optimisé pour être déployé sur **Vercel**.
+
+**Lien de la démo :** [Insérez votre lien Vercel ici]
+
+---
+
+© 2026 PulsAI CRM. Test d'intégration Frontend - Stage Développement.
