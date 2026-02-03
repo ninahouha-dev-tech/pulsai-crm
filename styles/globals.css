@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  /* Polices */
+  --font-sans: var(--font-ubuntu), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-unbounded), ui-sans-serif, system-ui, sans-serif;
+
+  /* Charte PulsAI */
+  --color-pulsai-blue: #3590E3;   /* Primaire */
+  --color-pulsai-green: #BAF09D;  /* Accent / Success */
+  
+  --color-background: #0f1218;    /* Fond très sombre (proche noir) */
+  --color-surface: #1F2937;       /* Gris charte (Cards/Input) */
+  --color-surface-hover: #374151; /* Gris clair pour hover */
+  --color-border: #374151;        /* Bordures subtiles */
+  
+  --radius-xl: 12px;              /* Arrondis modernes */
+}
+
+/* Base styles */
+body {
+  background-color: var(--color-background);
+  color: #F9FAFB; /* Texte clair */
+}
+
+/* Utilitaires pour focus accessible */
+.focus-ring {
+  @apply outline-none ring-2 ring-pulsai-blue/50 ring-offset-2 ring-offset-background transition-all;
+}
+
+
+/* ... ton code existant ... */
+
+/* Customisation NProgress (Barre de chargement) */
+#nprogress .bar {
+  background: var(--color-pulsai-blue) !important;
+  height: 3px !important;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px var(--color-pulsai-blue), 0 0 5px var(--color-pulsai-blue) !important;
+}
+
+/* Sélection de texte (UX Detail) */
+::selection {
+  background-color: rgba(53, 144, 227, 0.3); /* PulsAI Blue transparent */
+  color: white;
+}
