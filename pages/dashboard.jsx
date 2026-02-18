@@ -49,7 +49,7 @@ const stats = [
     label: "Tickets Ouverts", 
     value: "12", 
     change: "-2", 
-    trend: "down", // Down is good for tickets
+    trend: "down", 
     icon: Ticket,
     color: "text-orange-400",
     bg: "bg-orange-500/10"
@@ -67,9 +67,12 @@ const recentActivity = [
 
 const StatCard = ({ stat, index }) => (
   <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ delay: index * 0.1 }}
+    variants={{
+      hidden: { opacity: 0, y: 40, scale: 0.9 },
+      visible: { opacity: 1, y: 0, scale: 1 }
+    }}
+    whileHover={{ y: -8, scale: 1.02 }}
+    transition={{ type: "spring", stiffness: 300 }}
   >
     <Card className="p-5 flex items-start justify-between hover:border-gray-600 transition-colors cursor-default">
       <div>
@@ -133,11 +136,22 @@ export default function Dashboard() {
       </div>
 
       {/* 2. KPI Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <motion.div 
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          visible: {
+            transition: {
+              staggerChildren: 0.1
+            }
+          }
+        }}
+      >
         {stats.map((stat, i) => (
           <StatCard key={i} stat={stat} index={i} />
         ))}
-      </div>
+      </motion.div>
 
       {/* 3. Main Content Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

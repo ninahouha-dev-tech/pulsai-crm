@@ -52,7 +52,7 @@ export default function Conversations() {
                   </div>
                   <p className="text-xs text-gray-400 truncate">{conv.lastMessage}</p>
                   <div className="mt-2 flex gap-2">
-                    {conv.isAiHandled && <Badge variant="blue" className="text-[10px] px-1.5 py-0">AI Pilot</Badge>}
+                    {conv.isAiHandled && <Badge variant="blue" className="text-[10px] px-1.5 py-0">Pilote IA</Badge>}
                     <span className="text-[10px] bg-surface border border-border px-1.5 rounded text-gray-500 uppercase">{conv.platform}</span>
                   </div>
                 </div>

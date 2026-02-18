@@ -77,16 +77,7 @@ export default function LoginPage() {
             </div>
           </form>
 
-          <div className="mt-8 text-center">
-              <Button 
-                  variant="ghost" 
-                  className="text-gray-400 hover:text-white"
-                  onClick={() => router.push('/')}
-              >
-                  <LayoutTemplate size={16} className="mr-2" />
-                  Voir le Design System (UI Kit)
-              </Button>
-          </div>
+          
 
         </motion.div>
       </div>

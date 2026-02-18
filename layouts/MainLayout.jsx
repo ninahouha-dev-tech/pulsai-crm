@@ -40,12 +40,12 @@ export default function MainLayout({ children, title = "PulsAI CRM" }) {
                     NOS valeurs
                   </motion.span>
                 </Link>
-                <Link href="/#cta" className="group">
+                <Link href="/#pourquoi" className="group">
                   <motion.span 
                     whileTap={{ scale: 0.95 }}
                     className="inline-flex px-5 py-2 rounded-full text-gray-400 group-hover:text-white group-hover:bg-white/10 transition-all duration-300 font-medium text-[10px] uppercase tracking-widest border border-transparent group-hover:border-white/20 shadow-lg group-hover:shadow-pulsai-blue/10"
                   >
-                    Appel à action
+                    Pourquoi nous choisir
                   </motion.span>
                 </Link>
                 <Link href="/#tarifs" className="group">
@@ -58,15 +58,11 @@ export default function MainLayout({ children, title = "PulsAI CRM" }) {
                 </Link>
               </div>
 
-              {/* 5. Connexion */}
-              <Link href="/login" className="group">
-                <motion.span 
-                   whileTap={{ scale: 0.95 }}
-                   className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-gray-400 group-hover:text-white group-hover:bg-white/10 transition-all duration-300 font-medium text-[10px] uppercase tracking-widest border border-transparent group-hover:border-white/20"
-                >
-                  <LogIn size={14} />
-                  Connexion
-                </motion.span>
+              {/* 5. Accès Assistant (CTA) */}
+              <Link href="/login">
+                <Button variant="primary" size="md" className="shadow-pulsai-blue/30">
+                  Accéder à l'assistant
+                </Button>
               </Link>
            </nav>
         </header>

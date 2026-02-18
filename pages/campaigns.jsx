@@ -74,7 +74,7 @@ export default function Campaigns() {
                     <TableCell>
                         <div className="w-full max-w-[140px]">
                             <div className="flex justify-between text-xs mb-1">
-                                <span className="text-gray-400">Open Rate</span>
+                                <span className="text-gray-400">Taux d'ouverture</span>
                                 <span className="text-white font-bold">{camp.openRate}%</span>
                             </div>
                             <div className="h-1.5 w-full bg-surface-hover rounded-full overflow-hidden">

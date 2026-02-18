@@ -12,17 +12,17 @@ export default function Tickets() {
   // Fonction utilitaire pour le rendu des badges
   const getPriorityBadge = (prio) => {
     switch(prio) {
-        case 'high': return <Badge variant="warning" className="bg-red-500/10 text-red-400 border-red-500/20">High</Badge>;
-        case 'medium': return <Badge variant="warning">Med</Badge>;
-        case 'low': return <Badge className="bg-blue-500/10 text-blue-400 border-blue-500/20">Low</Badge>;
+        case 'high': return <Badge variant="warning" className="bg-red-500/10 text-red-400 border-red-500/20">Haute</Badge>;
+        case 'medium': return <Badge variant="warning">Moyenne</Badge>;
+        case 'low': return <Badge className="bg-blue-500/10 text-blue-400 border-blue-500/20">Basse</Badge>;
         default: return <Badge>{prio}</Badge>;
     }
   };
 
   const getStatusBadge = (status) => {
       switch(status) {
-          case 'open': return <div className="flex items-center gap-1.5 text-blue-400"><div className="w-1.5 h-1.5 rounded-full bg-blue-400"/>Open</div>;
-          case 'resolved': return <div className="flex items-center gap-1.5 text-gray-500"><CheckCircle2 size={14}/>Resolved</div>;
+          case 'open': return <div className="flex items-center gap-1.5 text-blue-400"><div className="w-1.5 h-1.5 rounded-full bg-blue-400"/>Ouvert</div>;
+          case 'resolved': return <div className="flex items-center gap-1.5 text-gray-500"><CheckCircle2 size={14}/>Résolu</div>;
           default: return <span className="text-gray-400 capitalize">{status}</span>;
       }
   };

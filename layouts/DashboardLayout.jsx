@@ -5,7 +5,7 @@ import Header from "@/components/layout/Header";
 import MobileNav from "@/components/layout/MobileNav";
 import { motion } from "framer-motion";
 
-export default function DashboardLayout({ children, title = "Dashboard" }) {
+export default function DashboardLayout({ children, title = "Tableau de bord" }) {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
   return (
@@ -33,10 +33,15 @@ export default function DashboardLayout({ children, title = "Dashboard" }) {
           
           <main className="flex-1 overflow-y-auto p-6 md:p-8">
             <motion.div
-              key={title} // Force le re-render de l'animation au changement de page
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
+              key={title} 
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ 
+                type: "spring",
+                stiffness: 100,
+                damping: 20,
+                mass: 1
+              }}
               className="max-w-7xl mx-auto space-y-6"
             >
               {children}

@@ -25,7 +25,7 @@ export const mockConversations = [
     id: 3, 
     user: "Jean Dupont", 
     avatar: "JD", 
-    lastMessage: "Je voudrais upgrade mon plan.", 
+    lastMessage: "Je voudrais passer à l'offre supérieure.", 
     time: "3h", 
     status: "pending", 
     platform: "email", 
@@ -46,9 +46,9 @@ export const mockConversations = [
 export const mockTickets = [
   { id: "T-1024", subject: "Erreur de connexion 504", customer: "Acme Corp", priority: "high", status: "open", agent: "Paul", date: "02 Fév" },
   { id: "T-1023", subject: "Demande de remboursement", customer: "Sophie M.", priority: "medium", status: "pending", agent: "Sarah", date: "01 Fév" },
-  { id: "T-1022", subject: "Feature request: Dark mode", customer: "DevTeam", priority: "low", status: "resolved", agent: "AI Bot", date: "30 Jan" },
+  { id: "T-1022", subject: "Demande de fonctionnalité : Mode sombre", customer: "DevTeam", priority: "low", status: "resolved", agent: "Robot IA", date: "30 Jan" },
   { id: "T-1021", subject: "Problème d'export PDF", customer: "Finance SA", priority: "high", status: "open", agent: "Paul", date: "29 Jan" },
-  { id: "T-1020", subject: "Question sur les tarifs", customer: "New User", priority: "low", status: "resolved", agent: "Sarah", date: "28 Jan" },
+  { id: "T-1020", subject: "Question sur les tarifs", customer: "Nouvel Utilisateur", priority: "low", status: "resolved", agent: "Sarah", date: "28 Jan" },
 ];
 
 // ... (tes mocks existants conversations/tickets)
