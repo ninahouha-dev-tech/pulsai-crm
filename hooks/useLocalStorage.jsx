@@ -1,9 +1,6 @@
 import { useState, useCallback, useEffect } from "react";
 
-/**
- * Custom hook to manage local storage with ease.
- * Demonstrates advanced state management for the PulsAI test.
- */
+
 export function useLocalStorage(key, initialValue) {
   const [storedValue, setStoredValue] = useState(() => {
     if (typeof window === "undefined") return initialValue;

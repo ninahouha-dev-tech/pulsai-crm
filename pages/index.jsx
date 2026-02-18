@@ -74,7 +74,7 @@ export default function Home() {
       </section>
 
       {/* --- FEATURES GRID --- */}
-      <section className="py-24 border-t border-white/5 bg-background/50">
+      <section id="valeurs" className="py-24 border-t border-white/5 bg-background/50">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-8 rounded-2xl bg-surface/30 border border-white/5 hover:border-pulsai-blue/30 transition-colors">
@@ -102,160 +102,112 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- DESIGN SYSTEM CATALOG --- */}
-      <div id="design-system" className="space-y-20 max-w-6xl mx-auto pb-32 px-6">
-        
-        <div className="flex flex-col gap-6 border-b border-border pb-8">
-            <div>
-                <h2 className="text-4xl font-display font-bold text-white mb-4">
-                    🎨 Kit de Design PulsAI
-                </h2>
-                <p className="text-gray-400 max-w-2xl text-lg">
-                    Bibliothèque de composants UI réutilisables utilisés pour construire l'application.
-                </p>
-            </div>
+      {/* --- CTA SECTION --- */}
+      <section id="cta" className="py-24 relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-pulsai-blue/10 rounded-full blur-[120px] -z-10" />
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
+            Avez-vous besoin de notre assistant PulsAI ?
+          </h2>
+          <p className="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
+            Rejoignez les entreprises qui automatisent déjà leur croissance avec l'intelligence artificielle.
+          </p>
+          <Link href="/login">
+            <Button size="lg" className="h-14 px-10 text-lg shadow-xl shadow-pulsai-blue/20">
+              Accéder à l'assistant
+              <MoveRight size={20} className="ml-2" />
+            </Button>
+          </Link>
         </div>
+      </section>
 
-        {/* 1. FOUNDATIONS (COLORS & TYPO) */}
-        <section className="space-y-6">
-            <h2 className="text-2xl font-display font-semibold text-white flex items-center gap-3">
-                <span className="bg-pulsai-blue/10 text-pulsai-blue p-2 rounded-lg text-sm">01</span> 
-                Fondations
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-                {/* Couleurs */}
-                <Card>
-                    <CardHeader title="Palette de Couleurs" description="Charte exigée par le test." />
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4">
-                        <div className="space-y-2">
-                             <div className="h-16 w-full bg-pulsai-blue rounded-xl shadow-lg shadow-pulsai-blue/20"></div>
-                             <div className="text-xs text-center"><span className="text-white font-bold">Blue</span><br/><span className="text-gray-500">#3590E3</span></div>
-                        </div>
-                        <div className="space-y-2">
-                             <div className="h-16 w-full bg-pulsai-green rounded-xl shadow-lg shadow-pulsai-green/10"></div>
-                             <div className="text-xs text-center"><span className="text-white font-bold">Green</span><br/><span className="text-gray-500">#BAF09D</span></div>
-                        </div>
-                        <div className="space-y-2">
-                             <div className="h-16 w-full bg-surface rounded-xl border border-border"></div>
-                             <div className="text-xs text-center"><span className="text-white font-bold">Surface</span><br/><span className="text-gray-500">#1F2937</span></div>
-                        </div>
-                        <div className="space-y-2">
-                             <div className="h-16 w-full bg-background rounded-xl border border-border"></div>
-                             <div className="text-xs text-center"><span className="text-white font-bold">Background</span><br/><span className="text-gray-500">#0f1218</span></div>
-                        </div>
-                    </div>
-                </Card>
-
-                {/* Typographie */}
-                <Card>
-                    <CardHeader title="Typographie" description="Next/Font: Ubuntu & Unbounded." />
-                    <div className="space-y-6 mt-4">
-                        <div>
-                            <p className="text-xs text-gray-500 mb-1">Display (Titres) - Unbounded</p>
-                            <p className="font-display text-3xl font-bold text-white">The quick brown fox</p>
-                        </div>
-                        <div>
-                            <p className="text-xs text-gray-500 mb-1">Body (Texte) - Ubuntu</p>
-                            <p className="font-sans text-base text-gray-300">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
-                            </p>
-                        </div>
-                    </div>
-                </Card>
+      {/* --- PRICING SECTION --- */}
+      <section id="tarifs" className="py-24 bg-surface/20 border-t border-white/5">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <Badge className="mb-4">Tarification</Badge>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-white">Des plans adaptés à votre croissance</h2>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Starter Plan */}
+            <div className="p-8 rounded-2xl border border-white/5 bg-background/40 flex flex-col">
+              <h3 className="text-xl font-bold text-white mb-2">Starter</h3>
+              <p className="text-gray-400 text-sm mb-6">Pour les petites équipes et startups.</p>
+              <div className="mb-6">
+                <span className="text-4xl font-bold text-white">29€</span>
+                <span className="text-gray-500 ml-2">/mois</span>
+              </div>
+              <ul className="space-y-4 mb-8 flex-grow">
+                <li className="flex items-center text-gray-300 text-sm gap-2">
+                  <Zap size={16} className="text-pulsai-blue" /> 1000 crédits IA / mois
+                </li>
+                <li className="flex items-center text-gray-300 text-sm gap-2">
+                  <Zap size={16} className="text-pulsai-blue" /> 1 Agent conversationnel
+                </li>
+                <li className="flex items-center text-gray-300 text-sm gap-2">
+                  <Zap size={16} className="text-pulsai-blue" /> Support par email
+                </li>
+              </ul>
+              <Button variant="outline" className="w-full">Choisir Starter</Button>
             </div>
-        </section>
 
-        {/* 2. ACTIONS (BUTTONS & BADGES) */}
-        <section className="space-y-6">
-            <h2 className="text-2xl font-display font-semibold text-white flex items-center gap-3">
-                <span className="bg-purple-500/10 text-purple-400 p-2 rounded-lg text-sm">02</span> 
-                Actions & Feedback
-            </h2>
-            <Card>
-                <div className="space-y-8">
-                    <div>
-                        <Label className="mb-4 block">Boutons (Variants)</Label>
-                        <div className="flex flex-wrap gap-4 items-center">
-                            <Button>Primary Action</Button>
-                            <Button variant="secondary">Secondary</Button>
-                            <Button variant="ghost">Ghost Button</Button>
-                            <Button variant="danger">Destructive</Button>
-                        </div>
-                    </div>
-                    <div className="h-px bg-border w-full" />
-                    <div>
-                         <Label className="mb-4 block">États & Formes</Label>
-                         <div className="flex flex-wrap gap-4 items-center">
-                            <Button isLoading>Loading State</Button>
-                            <Button disabled>Disabled</Button>
-                            <Button size="sm">Small Size</Button>
-                            <Button className="rounded-full gap-2"><Plus size={18}/> Pill Shape</Button>
-                         </div>
-                    </div>
-                    <div className="h-px bg-border w-full" />
-                    <div>
-                        <Label className="mb-4 block">Badges</Label>
-                        <div className="flex gap-3">
-                            <Badge variant="blue">Premium</Badge>
-                            <Badge variant="success">Confirmé</Badge>
-                            <Badge variant="warning">En attente</Badge>
-                            <Badge>Défault</Badge>
-                        </div>
-                    </div>
-                </div>
-            </Card>
-        </section>
-
-        {/* 3. FORMS & DATA */}
-        <section className="space-y-6">
-            <h2 className="text-2xl font-display font-semibold text-white flex items-center gap-3">
-                <span className="bg-emerald-500/10 text-emerald-400 p-2 rounded-lg text-sm">03</span> 
-                Formulaires & Données
-            </h2>
-            <div className="grid lg:grid-cols-2 gap-8">
-                {/* Inputs */}
-                <Card>
-                    <CardHeader title="Champs de Saisie" />
-                    <div className="space-y-5 mt-4">
-                        <Input label="Email" placeholder="nom@exemple.com" />
-                        <div className="grid grid-cols-2 gap-4">
-                             <Select label="Rôle" options={[{label: 'Admin', value: 'admin'}, {label: 'User', value: 'user'}]} />
-                             <Input label="Mot de passe" type="password" value="secret123" readOnly />
-                        </div>
-                        <Input label="Avec Erreur" error="Ce champ est requis" />
-                    </div>
-                </Card>
-
-                {/* Data Display */}
-                <Card className="flex flex-col">
-                    <CardHeader title="Tableau & Loading" />
-                    <div className="mt-4 flex-1">
-                        <Table 
-                             headers={["Nom", "Rôle", "Statut", "Action"]}
-                             data={users}
-                             renderRow={(user, i) => (
-                               <tr key={i} className="hover:bg-surface-hover/30 transition-colors">
-                                 <TableCell className="font-medium text-white">{user.name}</TableCell>
-                                 <TableCell>{user.role}</TableCell>
-                                 <TableCell>
-                                   <Badge variant={user.status === "Actif" ? "success" : "warning"}>{user.status}</Badge>
-                                 </TableCell>
-                                 <TableCell>
-                                   <Button variant="ghost" size="sm">Éditer</Button>
-                                 </TableCell>
-                               </tr>
-                             )}
-                        />
-                        <div className="mt-6">
-                             <Label className="mb-2 block">Skeleton Loader</Label>
-                             <Skeleton className="h-12 w-full rounded-xl" />
-                        </div>
-                    </div>
-                </Card>
+            {/* Pro Plan */}
+            <div className="p-8 rounded-2xl border-2 border-pulsai-blue bg-pulsai-blue/5 flex flex-col relative scale-105 shadow-2xl shadow-pulsai-blue/10">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-3 py-1 bg-pulsai-blue text-white text-[10px] font-bold rounded-full uppercase tracking-wider">
+                Recommandé
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Pro</h3>
+              <p className="text-gray-400 text-sm mb-6">Le meilleur pour la mise à l'échelle.</p>
+              <div className="mb-6">
+                <span className="text-4xl font-bold text-white">79€</span>
+                <span className="text-gray-500 ml-2">/mois</span>
+              </div>
+              <ul className="space-y-4 mb-8 flex-grow">
+                <li className="flex items-center text-gray-300 text-sm gap-2">
+                  <Zap size={16} className="text-pulsai-blue" /> 5000 crédits IA / mois
+                </li>
+                <li className="flex items-center text-gray-300 text-sm gap-2">
+                  <Zap size={16} className="text-pulsai-blue" /> 5 Agents conversationnels
+                </li>
+                <li className="flex items-center text-gray-300 text-sm gap-2">
+                  <Zap size={16} className="text-pulsai-blue" /> Scoring prédictif avancé
+                </li>
+                <li className="flex items-center text-gray-300 text-sm gap-2">
+                  <Zap size={16} className="text-pulsai-blue" /> Support prioritaire
+                </li>
+              </ul>
+              <Button className="w-full">Choisir Pro</Button>
             </div>
-        </section>
 
-      </div>
+            {/* Business Plan */}
+            <div className="p-8 rounded-2xl border border-white/5 bg-background/40 flex flex-col">
+              <h3 className="text-xl font-bold text-white mb-2">Enterprise</h3>
+              <p className="text-gray-400 text-sm mb-6">Solutions sur mesure pour grands groupes.</p>
+              <div className="mb-6">
+                <span className="text-4xl font-bold text-white">Sur devis</span>
+              </div>
+              <ul className="space-y-4 mb-8 flex-grow">
+                <li className="flex items-center text-gray-300 text-sm gap-2">
+                  <Zap size={16} className="text-pulsai-blue" /> Crédits illimités
+                </li>
+                <li className="flex items-center text-gray-300 text-sm gap-2">
+                  <Zap size={16} className="text-pulsai-blue" /> Agents illimités
+                </li>
+                <li className="flex items-center text-gray-300 text-sm gap-2">
+                  <Zap size={16} className="text-pulsai-blue" /> Intégration API personnalisée
+                </li>
+                <li className="flex items-center text-gray-300 text-sm gap-2">
+                  <Zap size={16} className="text-pulsai-blue" /> Account Manager dédié
+                </li>
+              </ul>
+              <Button variant="outline" className="w-full">Contacter la vente</Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
     </MainLayout>
   );
 }
